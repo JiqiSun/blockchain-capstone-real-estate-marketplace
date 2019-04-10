@@ -6,7 +6,7 @@
     
 // Test verification with incorrect proof
 
-var SquareVerifier = artifacts.require('Verifier');
+var SquareVerifier = artifacts.require('SquareVerifier');
 const _proof = require('../../zokrates/code/square/proof');
 
 
@@ -29,14 +29,13 @@ contract('testSquareVerifier', accounts => {
         });
 
         it('verification with incorrect proof', async function(){
-            //let revert = false;
             let _A = ["0x2865aa07d0a82d140b32794f7af78640895ba76ef20edba62acacd8593d802e9", "0x2e88ac3a27bc3fd40c30eb02f6f170f644b93b1cff67c0db37bb0a44b2436673"];
             let result = await this.contract.verifyTx.call(_A, _proof.proof.A_p, 
                 _proof.proof.B, _proof.proof.B_p, 
                 _proof.proof.C, _proof.proof.C_p, 
                 _proof.proof.H, _proof.proof.K, 
                 _proof.input, {from: account_one});
-                
+
             assert.equal(result, false, "failed verification with incorrect proof");     
         })
     })
