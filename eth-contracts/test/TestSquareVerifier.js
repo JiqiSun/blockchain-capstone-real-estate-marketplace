@@ -7,7 +7,7 @@
 // Test verification with incorrect proof
 
 var SquareVerifier = artifacts.require('SquareVerifier');
-const _proof = require('../../zokrates/code/square/proof');
+const _proof = require('../../zokrates/code/proof/proof');
 
 
 contract('testSquareVerifier', accounts => {
