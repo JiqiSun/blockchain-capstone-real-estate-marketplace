@@ -7,19 +7,19 @@ const OWNER_ADDRESS = process.env.OWNER_ADDRESS
 const NETWORK = process.env.NETWORK
 const NUM_PROPERTIES = 10
 
-const contract = require('../../eth-contracts/build/contracts/SolnSquareVerifier')
+const contract = require('../eth-contracts/build/contracts/SolnSquareVerifier')
 const ABI = contract.abi
 
 const proofs = [
-    require('../../zokrates/code/proof/proof'),
-    require('../../zokrates/code/proof/proof_2'),
-    require('../../zokrates/code/proof/proof_3'),
-    require('../../zokrates/code/proof/proof_4'),
-    require('../../zokrates/code/proof/proof_5'),
-    require('../../zokrates/code/proof/proof_6'),
-    require('../../zokrates/code/proof/proof_7'),
-    require('../../zokrates/code/proof/proof_8'),
-    require('../../zokrates/code/proof/proof_9')
+    require('../zokrates/code/proof/proof'),
+    require('../zokrates/code/proof/proof_2'),
+    require('../zokrates/code/proof/proof_3'),
+    require('../zokrates/code/proof/proof_4'),
+    require('../zokrates/code/proof/proof_5'),
+    require('../zokrates/code/proof/proof_6'),
+    require('../zokrates/code/proof/proof_7'),
+    require('../zokrates/code/proof/proof_8'),
+    require('../zokrates/code/proof/proof_9')
 ]
 
 async function main() {
