@@ -2,9 +2,10 @@
 
 The capstone will build upon the knowledge you have gained in the course in order to build a decentralized housing product.
 
-## Addresses 
-Contract address (Token) : [0x84BB0216c801a6861586c1D04378B20d7CC399b2] 
-Contract address (Verifier): [0x063C28c04E3773dAe11aCeEc19Ec9E987594e99B]
+## Contract Addresses 
+Token Contract address : [0xb6b7734768169258940cd4b2427547b93c2086bf](https://rinkeby.etherscan.io/address/0xb6b7734768169258940cd4b2427547b93c2086bf) 
+Verifier Contract address: [0x08349e78c30951Eb164462BfF16458Fa343e020b]
+(https://rinkeby.etherscan.io/address/0x08349e78c30951Eb164462BfF16458Fa343e020b)
 OpenSea Marketplace Storefront link's: [Real Estate Exchange](https://rinkeby.opensea.io/category/realestateexchange)
 
 # Project Resources

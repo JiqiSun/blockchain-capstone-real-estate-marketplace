@@ -26,6 +26,11 @@ contract('TestERC721Mintable', accounts => {
           assert.equal(result.toNumber(),1, "Wrong token balance!");  
         })
 
+        it('should return token name', async function () { 
+            let result = await this.contract.name.call({from:account_one})
+            assert.equal(result, "Udacity Real Estate Exchange", "name not match!")    
+        })
+
 
         // token uri should be complete i.e: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/1
         it('should return token uri', async function () { 

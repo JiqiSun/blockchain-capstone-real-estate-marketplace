@@ -59,9 +59,11 @@ contract SolnSquareVerifier is ReexERC721Token {
 
     SquareVerifier public verifierContract;
 
-    constructor (address verifier_address) public {
-        verifierContract  = SquareVerifier(verifier_address);
+
+    constructor (address verifierAddress) public {
+        verifierContract = SquareVerifier(verifierAddress);
     }
+
 
     function mintNFT(
         address to,

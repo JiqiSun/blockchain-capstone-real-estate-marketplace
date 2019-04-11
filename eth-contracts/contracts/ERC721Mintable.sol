@@ -530,15 +530,15 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
     }
 
     // TODO: create external getter functions for name, symbol, and baseTokenURI
-    function getName() external view returns (string memory) {
+    function name() external view returns (string memory) {
         return _name;
     }
 
-    function getSymbol() external view returns (string memory) {
+    function symbol() external view returns (string memory) {
         return _symbol;
     }
 
-    function getBaseTokenURI() external view returns (string memory) {
+    function baseTokenURI() external view returns (string memory) {
         return _baseTokenURI;
     }
 
@@ -572,7 +572,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 
-contract ReexERC721Token is ERC721Metadata("Real Estate Exchange" , "REEX", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/"){
+contract ReexERC721Token is ERC721Metadata("Udacity Real Estate Exchange" , "UREEX", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/"){
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool) {
         super._mint(to, tokenId);
         super._setTokenURI(tokenId);

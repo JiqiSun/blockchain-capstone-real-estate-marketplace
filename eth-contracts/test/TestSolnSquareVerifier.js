@@ -33,6 +33,25 @@ contract('TestSolnSquareVerifier', accounts =>{
             let result = await this.contract.totalSupply.call({from: account_one});
             assert.equal(result.toNumber(),2, "ERC721 token did not mint!")     
         });
+
+        it('should return token name', async function () { 
+            let result = await this.contract.name.call({from:account_one})
+            assert.equal(result, "Udacity Real Estate Exchange", "name not match!")    
+        });
+
+        it('should not mint token if the solution exist', async function () {
+            revert = false;
+            try {
+                await this.contract.mintNFT(account_two, 0, _proof.proof.A, _proof.proof.A_p, _proof.proof.B, 
+                    _proof.proof.B_p, _proof.proof.C, _proof.proof.C_p, 
+                    _proof.proof.H, _proof.proof.K, _proof.input, {from: account_one});
+            } catch(e){
+                revert = true;
+            }    
+
+            assert.equal(revert, true, "solution already exist!");
+           
+        });
     })
 
 })
