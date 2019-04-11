@@ -4,10 +4,12 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 ## Tests all
 `cd eth-contracts/`
+
 `truffle test`
 
 ## Tests single  
 `cd eth-contracts/`
+
 `truffle test test/TestERC721Mintable.js`  
 `truffle test test/TestSquareVerifier.js`  
 `truffle test test/TestSolnSquareVerifier.js`
